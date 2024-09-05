@@ -1,0 +1,19 @@
+{
+  "name": "my_website",
+  "version": "1.0.0",
+  "description": "My first website project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnikonv/my_website.nj.git"
+  },
+  "author": "Nikon Veremeichik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vnikonv/my_website.nj/issues"
+  },
+  "homepage": "https://github.com/vnikonv/my_website.nj#readme"
+}
