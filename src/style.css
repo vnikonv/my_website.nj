@@ -2,7 +2,7 @@
     display: flex; /* Sets .navbar container as a flex-container, 
     allowing its child-elements to be arranged in a single row */
     flex-direction: row; /* Arranges child-elements into a row */
-    justify-content: space-between; /* Arranges .navbar child-elements equally, with as much space between them as possible */
+    justify-content: space-evenly; /* Arranges .navbar child-elements evenly */
     background-color: #faf7f7; /* Sets background color for .navbar */
 }
 
@@ -11,11 +11,11 @@
     flex-direction: row; /* Arranges list elements into a row */
     list-style: none; /* Removes list markers */
     margin: 0px; /* Removes the outer indent of ul */
-    justify-content: center; /* Centers child-elements of ul */
 }
 
 .navbar ul li {
     display: flex; /* Sets each li as a flex-container for its contents */
+    margin-right: 10px; /* Adds a right-side indentation to each li */
 }
 
 .navbar ul li:hover {
