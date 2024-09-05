@@ -11,6 +11,7 @@
     flex-direction: row; /* Располагает элементы списка (li) в строку */
     list-style: none; /* Убирает маркеры списка */
     margin: 0px; /* Убирает внешний отступ у списка */
+    justify-content: center;
 }
 
 .navbar ul li {
