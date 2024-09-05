@@ -1,43 +1,43 @@
 .navbar {
-    display: flex; /* Устанавливает контейнер .navbar как flex-контейнер, 
-    позволяя его дочерним элементам располагаться в одной линии */
-    flex-direction: row; /* Располагает дочерние элементы .navbar в строку */
-    justify-content: space-between; /* Распределяет дочерние элементы .navbar равномерно, с максимальным пространством между ними */
-    background-color: #faf7f7; /* Устанавливает фоновый цвет для .navbar */
+    display: flex; /* Sets .navbar container as a flex-container, 
+    allowing its child-elements to be arranged in a single row */
+    flex-direction: row; /* Arranges child-elements into a row */
+    justify-content: space-between; /* Arranges .navbar child-elements equally, with as much space between them as possible */
+    background-color: #faf7f7; /* Sets background color for .navbar */
 }
 
 .navbar ul {
-    display: flex; /* Устанавливает контейнер ul как flex-контейнер для его дочерних элементов (li) */
-    flex-direction: row; /* Располагает элементы списка (li) в строку */
-    list-style: none; /* Убирает маркеры списка */
-    margin: 0px; /* Убирает внешний отступ у списка */
-    justify-content: center; /*  */
+    display: flex; /* Sets ul as a flex-container for its child-elements li*/
+    flex-direction: row; /* Arranges list elements into a row */
+    list-style: none; /* Removes list markers */
+    margin: 0px; /* Removes the outer indent of ul */
+    justify-content: center; /* Centers child-elements of ul */
 }
 
 .navbar ul li {
-    display: flex; /* Устанавливает каждый элемент списка (li) как flex-контейнер для его содержимого */
+    display: flex; /* Sets each li as a flex-container for its contents */
 }
 
 .navbar ul li:hover {
-    background-color: #7cc6e5; /* Изменяет фоновый цвет элемента списка при наведении курсора */
-    border-radius: 20%; /* Скругляет углы элемента списка при наведении курсора */
+    background-color: #7cc6e5; /* Changes the background color when hovered at */
+    border-radius: 20%; /* Rounds up the edges when hovered at */
 }
 
 .navbar ul li a {
-    text-decoration: none; /* Убирает подчеркивание у ссылок */
-    color: black; /* Устанавливает цвет текста ссылок черным */
-    margin: auto; /* Центрирует текст внутри элемента списка */
+    text-decoration: none; /* Removes link underline */
+    color: black; /* Sets the color of link text to black */
+    margin: auto; /* Centers the text inside li */
 }
 
 .navbar div {
-    display: flex; /* Устанавливает div как flex-контейнер */
-    margin-right: 20px; /* Добавляет отступ справа у div */
+    display: flex; /* Sets div as a flex-container */
+    margin-right: 20px; /* Adds an indentation on the right of div */
 }
 
 .navbar div a {
-    text-decoration: none; /* Убирает подчеркивание ссылок в div */
-    color: black; /* Устанавливает цвет текста ссылок черным */
-    margin: auto; /* Центрирует текст внутри div */
+    text-decoration: none; /* Removes link underline in div */
+    color: black; /* Sets the color of link text to black */
+    margin: auto; /* Centers the text inside div */
 }
 
 .navbar div:hover {
