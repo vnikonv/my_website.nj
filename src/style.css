@@ -11,12 +11,11 @@
     flex-direction: row; /* Располагает элементы списка (li) в строку */
     list-style: none; /* Убирает маркеры списка */
     margin: 0px; /* Убирает внешний отступ у списка */
-    justify-content: center;
+    justify-content: center; /*  */
 }
 
 .navbar ul li {
     display: flex; /* Устанавливает каждый элемент списка (li) как flex-контейнер для его содержимого */
-    margin-right: 10px; /* Добавляет отступ справа у каждого элемента списка */
 }
 
 .navbar ul li:hover {
