@@ -2,7 +2,7 @@
     display: flex; /* Sets .navbar container as a flex-container, 
     allowing its child-elements to be arranged in a single row */
     flex-direction: row; /* Arranges child-elements into a row */
-    
+    justify-content: space-evenly; /* Arranges .navbar child-elements evenly */
     background-color: #faf7f7; /* Sets background color for .navbar */
 }
 
