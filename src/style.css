@@ -1,51 +1,53 @@
 .navbar {
     display: flex; /* Sets .navbar container as a flex-container, 
-    allowing its child-elements to be arranged in a single row */
-    flex-direction: row; /* Arranges child-elements into a row */
-    justify-content: space-evenly; /* Arranges .navbar child-elements evenly */
+    allowing its items to be arranged in a single row */
+    flex-direction: row; /* Arranges items into a row */
     background-color: #faf7f7; /* Sets background color for .navbar */
+    align-content: space-evenly; /* Arranges flex-container items evenly*/
+}
+
+.navbar img {
+    display: flex; /* Sets <img> as a flex-container */
+    max-width: 60px;
+    max-height: 60px;
+    margin-right: 10%;
+    margin-left: 0;
 }
 
 .navbar ul {
-    display: flex; /* Sets ul as a flex-container for its child-elements li*/
+    display: flex; /* Sets .ul as a flex-container for its items*/
     flex-direction: row; /* Arranges list elements into a row */
     list-style: none; /* Removes list markers */
-    margin: 0px; /* Removes the outer indent of ul */
+    margin: auto;
 }
 
 .navbar ul li {
-    display: flex; /* Sets each li as a flex-container for its contents */
-    margin-right: 10px; /* Adds a right-side indentation to each li */
+    margin-right: 10px; /* Adds a right-side indentation to each li,
+    adding space between each item in the ul */
 }
 
-.navbar ul li:hover {
-    background-color: #7cc6e5; /* Changes the background color when hovered at */
-    border-radius: 20%; /* Rounds up the edges when hovered at */
+.navbar .entry {
+    display: flex; /* Sets .entry as a flex-container for its items*/
+    max-width: 60px;
+    max-height: 60px;
+    color: black; /* Sets the color of link text to black */
+    justify-content: right;
+    margin-left: 10%;
+    margin-right: 0px;
 }
 
-.navbar ul li a {
+.navbar a {
+    margin: auto;
     text-decoration: none; /* Removes link underline */
     color: black; /* Sets the color of link text to black */
-    margin: auto; /* Centers the text inside li */
 }
 
-.navbar div {
-    display: flex; /* Sets div as a flex-container */
-    margin-right: 20px; /* Adds an indentation on the right of div */
+.navbar a:hover {
+    background-color: #7cc6e5; /* Changes the background color when hovered over */
+    border-radius: 20%; /* Rounds up the edges when hovered over */
 }
 
-.navbar div a {
-    text-decoration: none; /* Removes link underline in div */
-    color: black; /* Sets the color of link text to black */
-    margin: auto; /* Centers the text inside div */
-}
-
-.navbar div:hover {
-    background-color: #7cc6e5; /* Изменяет фоновый цвет div при наведении курсора */
-    border-radius: 20%; /* Скругляет углы div при наведении курсора */
-}
-
-/* Контейнер с элементами, использующий Flexbox для адаптивного размещения */
+/* Element container usign Flexbox for adaptive rendering */
 .container {
     display: flex;
     flex-direction: row; /* Располагает дочерние элементы .container в строку */
@@ -58,11 +60,16 @@
     margin: auto;
 }
 
+.my_photo {
+    width: 50%;
+}
+
 /* Стили для изображений внутри контейнера */
 .container img {
+    display: block;
     border-radius: 10%; /* Скругленные углы изображения */
     box-shadow: 10px 10px 5px gray; /* Добавление тени с серым цветом */
-    width: 50%; /* Ширина изображения составляет 50% от ширины родительского элемента */
+    max-width: 500px;
     height: auto; /* Автоматическое подстраивание высоты для сохранения пропорций */
     margin: auto;
 }
