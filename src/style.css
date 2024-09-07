@@ -2,7 +2,7 @@
     display: flex; /* Sets .navbar container as a flex-container, 
     allowing its items to be arranged in a single row */
     flex-direction: row; /* Arranges items into a row */
-    background-color: #faf7f7; /* Sets background color for .navbar */
+    background-color: #ffffff; /* Sets background color for .navbar */
     align-content: space-evenly; /* Arranges flex-container items evenly*/
 }
 
@@ -67,9 +67,9 @@
 /* Стили для изображений внутри контейнера */
 .container img {
     display: block;
-    border-radius: 10%; /* Скругленные углы изображения */
+    border-radius: 5%; /* Скругленные углы изображения */
     box-shadow: 10px 10px 5px gray; /* Добавление тени с серым цветом */
-    max-width: 500px;
+    width: 30%;
     height: auto; /* Автоматическое подстраивание высоты для сохранения пропорций */
     margin: auto;
 }
@@ -83,12 +83,15 @@
 
 /* Фон для всей страницы */
 body {
-    background-color: #faf7f7; /* Светло-серый цвет */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(221, 184, 197);
 }
 
 /* Фон для основного содержимого страницы */
 main {
-    background: linear-gradient(90deg, rgba(254,254,255,1) 0%, rgba(226,237,233,0.72) 37%, rgba(208,238,243,1) 100%);
+    background: linear-gradient(90deg, rgb(234, 231, 228), rgb(239, 214, 196));
     /* Градиентный фон, плавно переходящий от светлого к более темному оттенку */
 }
 
@@ -173,6 +176,9 @@ p:hover {
     border-radius: 10%; /* Скругление углов изображений */
     box-shadow: 5px 5px 5px #7cc6e5; /* Добавление синеватой тени к изображениям */
     margin-bottom: 10px; /* Отступ снизу для изображений */
+    width: 25%;
+    aspect-ratio: 3/5;
+    height: auto;
 }
 
 .book1 a, .book2 a, .book3 a {
@@ -196,6 +202,8 @@ footer {
     display: flex;
     flex-direction: row; /* Элементы внутри футера располагаются горизонтально */
     justify-content: center; /* Центрирование содержимого футера */
+    margin-top: auto;
+    background-color: rgb(255, 255, 255);
 }
 
 footer a {
