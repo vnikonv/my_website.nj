@@ -64,13 +64,13 @@
     width: 50%;
 }
 
-/* Стили для изображений внутри контейнера */
+/* Styles for images inside the container */
 .container img {
     display: block;
-    border-radius: 5%; /* Скругленные углы изображения */
-    box-shadow: 10px 10px 5px gray; /* Добавление тени с серым цветом */
+    border-radius: 5%; /* Rounded angles */
+    box-shadow: 10px 10px 5px gray; /* Grey shadow */
     width: 30%;
-    height: auto; /* Автоматическое подстраивание высоты для сохранения пропорций */
+    height: auto; /* Auto height for preserving original proportions */
     margin: auto;
 }
 
@@ -372,13 +372,17 @@ footer a {
 
 @media (min-width: 700px) and (max-width: 900px) {
     /* При ширине экрана от 700px до 900px */
-    
+
     .container img {
-        margin-top: 20px; /* Отступ сверху для изображений */
-        border-radius: 10%; /* Скругление углов изображений */
-        box-shadow: 5px 5px 5px gray; /* Тень для изображений */
-        width: 320px; /* Ширина изображения фиксирована */
-        height: 200px; /* Высота изображения фиксирована */
-        margin: auto; /* Центрирование изображения по горизонтали */
+        display: block;
+        border-radius: 5%; /* Rounded angles */
+        box-shadow: 10px 10px 5px gray; /* Grey shadow */
+        width: 30%;
+        height: auto; /* Auto height for preserving original proportions */
+        margin: auto;
+    }
+
+    .my_photo {
+        width: 50%;
     }
 }
