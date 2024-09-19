@@ -3,41 +3,33 @@
     allowing its items to be arranged in a single row */
     flex-direction: row; /* Arranges items into a row */
     background-color: #ffffff; /* Sets background color for .navbar */
-    align-content: space-evenly; /* Arranges flex-container items evenly*/
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .navbar img {
     display: flex; /* Sets <img> as a flex-container */
     max-width: 60px;
     max-height: 60px;
-    margin-right: 10%;
-    margin-left: 0;
 }
 
-.navbar ul {
-    display: flex; /* Sets .ul as a flex-container for its items*/
-    flex-direction: row; /* Arranges list elements into a row */
-    list-style: none; /* Removes list markers */
+.navbar .tabs {
+    display: flex; /* Sets tabs as a flex-container for its items*/
+    flex-direction: row; /* Arranges elements into a row */
     margin: auto;
+    justify-content: space-evenly;
 }
 
-.navbar ul li {
-    margin-right: 10px; /* Adds a right-side indentation to each li,
-    adding space between each item in the ul */
+.navbar .tabs div {
+    margin-right: 10px;
 }
 
 .navbar .entry {
     display: flex; /* Sets .entry as a flex-container for its items*/
-    max-width: 60px;
-    max-height: 60px;
     color: black; /* Sets the color of link text to black */
-    justify-content: right;
-    margin-left: 10%;
-    margin-right: 0px;
 }
 
 .navbar a {
-    margin: auto;
     text-decoration: none; /* Removes link underline */
     color: black; /* Sets the color of link text to black */
 }
@@ -217,59 +209,63 @@ footer a {
 @media (max-width: 700px) {
     /* Screen width below 700px */
 
-    .navbar .entry {
-        margin-left: 5%;
+    .navbar {
+        align-items: center;
+        justify-content: flex-end;
     }
 
     .navbar img {
-        margin-right: 70%;
-    }
-
-    .navbar .burger {
-        margin-right: 5%;
+        margin: auto;
+        margin-left: 0;
     }
     
-    .navbar ul {
+    .navbar .tabs {
         position: absolute;
-        background: radial-gradient(circle at top left, rgb(235, 224, 142), rgb(161, 222, 225), rgb(80, 173, 224)); /* Rainbow gradient background from the upper-left angle */
+        background: radial-gradient(circle at top left, rgb(235, 224, 142), rgb(251, 198, 138), rgb(248, 174, 226)); /* Rainbow gradient background from the upper-left angle */
         flex-direction: column; /* List elements will be displayed veryically */
         width: 30%;
         height: auto;
         top: 68px; /* List displayed 68px lower from the upper-left corner of the screen */
-        left: -40%; /* List displayed 40% of the screen width to the left */
+        left: -30%; /* List displayed 40% of the screen width to the left */
         z-index: 2; /* Stack level of the element. it will cover elements with lesser stack levels */
     }
 
-    .navbar ul li {
+    .navbar .tabs div {
         margin-top: 10px;
+        margin-left: 10px;
     }
 
-    .navbar ul li:hover {
+    .navbar .tabs div:hover {
         background-color: black; /* Black background when hovered over */
         transform: scale(1.07); /* Increased size of element by 7% when hovered over */
         transition: 0.4s ease; /* Smooth transition effect lasting 0.4s */
         border-radius: 5%;
     }
 
-    .navbar ul li:hover a {   
+    .navbar .tabs div:hover a {   
         color: white;
     }
 
-    .navbar ul li:hover a:hover {
-        color: rgb(255, 227, 248); /* Link color changes to pink when hovered over */
+    .navbar .tabs div:hover a:hover {
+        color: rgb(255, 199, 241); /* Link color changes to pink when hovered over */
         background-color: rgba(0, 0, 0, 0); /* Changes the background color to transparent when hovered over */
     }
 
-    .navbar ul li:nth-child(1) {
+    .navbar .tabs div:nth-child(1) {
         margin-top: 20px;
     }
 
-    .navbar ul li a {
+    .navbar .tabs div a {
         margin-left: 0; /* No indentation to the left */
         font-size: 1.2rem;
     }
 
-    .navbar.open ul {
+    .navbar .entry {
+        display: flex; /* Sets .entry as a flex-container for its items*/
+        color: black; /* Sets the color of link text to black */
+    }
+
+    .navbar.open .tabs {
         transform: translateX(100%); /* Move element 100% to the right (out of sight) */
         transition: 0.7s ease-in-out;
     }
@@ -363,9 +359,6 @@ footer a {
         position: relative;
         width: 40px;
         height: 40px;
-        margin: auto;
-        margin-left: 20px;
-        margin-right: 5px;
     }
 
     .burger span {
@@ -387,8 +380,8 @@ footer a {
     
 }
 
-@media (min-width: 700px) and (max-width: 900px) {
-    /* При ширине экрана от 700px до 900px */
+@media (min-width: 700px) and (max-width: 1000px) {
+    /* При ширине экрана от 700px до 1000px */
 
     .container img {
         display: block;
