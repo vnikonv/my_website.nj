@@ -215,8 +215,20 @@ footer a {
 }
 
 @media (max-width: 700px) {
-    /* При ширине экрана до 700px */
+    /* Screen width below 700px */
 
+    .navbar .entry {
+        margin-left: 5%;
+    }
+
+    .navbar img {
+        margin-right: 70%;
+    }
+
+    .navbar .burger {
+        margin-right: 5%;
+    }
+    
     .navbar ul {
         position: absolute;
         background: radial-gradient(circle at top left, rgb(235, 224, 142), rgb(161, 222, 225), rgb(80, 173, 224)); /* Rainbow gradient background from the upper-left angle */
