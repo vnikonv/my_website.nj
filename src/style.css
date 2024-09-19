@@ -265,7 +265,7 @@ footer a {
     opacity: 0; /* Makes the second span transparent */
     }
 
-    navbar.open .burger span:nth-child(3) {
+    .navbar.open .burger span:nth-child(3) {
     transform: translateY(0) rotate(-45deg);
     }
     
@@ -384,5 +384,6 @@ footer a {
 
     .my_photo {
         width: 50%;
+        height: auto;
     }
 }
