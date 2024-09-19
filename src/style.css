@@ -218,55 +218,60 @@ footer a {
     /* При ширине экрана до 700px */
 
     .navbar ul {
-    position: absolute;
-    background: radial-gradient(circle at top left, rgb(235, 224, 142), rgb(161, 222, 225), rgb(80, 173, 224)); /* Rainbow gradient background from the upper-left angle */
-    flex-direction: column; /* List elements will be displayed veryically */
-    width: 30%;
-    height: auto;
-    top: 68px; /* List displayed 68px lower from the upper-left corner of the screen */
-    left: -40%; /* List displayed 40% of the screen width to the left */
-    z-index: 2; /* Stack level of the element. it will cover elements with lesser stack levels */
+        position: absolute;
+        background: radial-gradient(circle at top left, rgb(235, 224, 142), rgb(161, 222, 225), rgb(80, 173, 224)); /* Rainbow gradient background from the upper-left angle */
+        flex-direction: column; /* List elements will be displayed veryically */
+        width: 30%;
+        height: auto;
+        top: 68px; /* List displayed 68px lower from the upper-left corner of the screen */
+        left: -40%; /* List displayed 40% of the screen width to the left */
+        z-index: 2; /* Stack level of the element. it will cover elements with lesser stack levels */
     }
 
     .navbar ul li {
-    margin-top: 10px;
+        margin-top: 10px;
     }
 
     .navbar ul li:hover {
-    background-color: black; /* Black background when hovered over */
-    transform: scale(1.07); /* Increased size of element by 7% when hovered over */
-    transition: 0.4s ease; /* Smooth transition effect lasting 0.4s */
-    border-radius: 5%;
+        background-color: black; /* Black background when hovered over */
+        transform: scale(1.07); /* Increased size of element by 7% when hovered over */
+        transition: 0.4s ease; /* Smooth transition effect lasting 0.4s */
+        border-radius: 5%;
     }
 
-    .navbar ul li a:hover {
-    color: white; /* Link color changes to white when hovered over */
+    .navbar ul li:hover a {   
+        color: white;
+    }
+
+    .navbar ul li:hover a:hover {
+        color: rgb(255, 227, 248); /* Link color changes to pink when hovered over */
+        background-color: rgba(0, 0, 0, 0); /* Changes the background color to transparent when hovered over */
     }
 
     .navbar ul li:nth-child(1) {
-    margin-top: 20px;
+        margin-top: 20px;
     }
 
     .navbar ul li a {
-    margin-left: 0; /* No indentation to the left */
-    font-size: 1.2rem;
+        margin-left: 0; /* No indentation to the left */
+        font-size: 1.2rem;
     }
 
     .navbar.open ul {
-    transform: translateX(100%); /* Move element 100% to the right (out of sight) */
-    transition: 0.7s ease-in-out;
+        transform: translateX(100%); /* Move element 100% to the right (out of sight) */
+        transition: 0.7s ease-in-out;
     }
 
     .navbar.open .burger span:nth-child(1) {
-    transform: translateY(0) rotate(45deg); /* Rotates the first span by 45°, then returns to the initial place */
+        transform: translateY(0) rotate(45deg); /* Rotates the first span by 45°, then returns to the initial place */
     }
 
     .navbar.open .burger span:nth-child(2) {
-    opacity: 0; /* Makes the second span transparent */
+        opacity: 0; /* Makes the second span transparent */
     }
 
     .navbar.open .burger span:nth-child(3) {
-    transform: translateY(0) rotate(-45deg);
+        transform: translateY(0) rotate(-45deg);
     }
     
     .container {
@@ -377,7 +382,7 @@ footer a {
         display: block;
         border-radius: 5%; /* Rounded angles */
         box-shadow: 10px 10px 5px gray; /* Grey shadow */
-        width: 30%;
+        width: 50%;
         height: auto; /* Auto height for preserving original proportions */
         margin: auto;
     }
