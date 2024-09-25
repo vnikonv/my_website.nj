@@ -24,14 +24,17 @@
     margin-right: 10px;
 }
 
+.navbar .work {
+    display: flex; /* Use flexbox for layout */
+    z-index: 10; /* Set stacking order */
+}
+
 .navbar .entry {
     display: flex; /* Sets .entry as a flex-container for its items*/
     color: black; /* Sets the color of link text to black */
 }
 
 .navbar ul .work {
-    display: flex; /* Use flexbox for layout */
-    z-index: 10; /* Set stacking order */
     list-style-position: inside;
     list-style: none;
     position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
