@@ -3,8 +3,8 @@
     allowing its items to be arranged in a single row */
     flex-direction: row; /* Arranges items into a row */
     background-color: #ffffff; /* Sets background color for .navbar */
-    align-items: center;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .navbar img {
@@ -18,17 +18,19 @@
     flex-direction: row; /* Arranges elements into a row */
     margin: auto;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: stretch;
 }
 
 .navbar .tabs div {
     margin-right: 10px;
 }
 
-.navbar .work {
-    display: flex; /* Use flexbox for layout */
+.navbar .tabs .work {
+    display: flex;
+    justify-content: center;
     z-index: 10; /* Set stacking order */
-    flex-direction: column; /* Arrange children in a column */
+    position: relative;
+    margin: auto;
 }
 
 .navbar .entry {
@@ -36,7 +38,8 @@
     color: black; /* Sets the color of link text to black */
 }
 
-.navbar .work .subtabs {
+.navbar .tabs .work .subtabs {
+    flex-direction: column; /* Arrange children in a column */
     position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
     left: 0; /* Align the left edge of the dropdown with the parent */
     top: 100%; /* Position the top of the dropdown just below the parent */
@@ -46,7 +49,7 @@
     z-index: 20; /* Set a higher stacking order for the dropdown */
 }
 
-.navbar .work:hover .subtabs {
+.navbar .tabs .work:hover .subtabs {
     display: block; /* Show the dropdown when hovering over the parent */
 }
 
