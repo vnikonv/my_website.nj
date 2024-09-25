@@ -30,14 +30,10 @@
 }
 
 .navbar ul .work {
-    position: relative; /* Set the position to relative to enable absolute positioning of its child elements */
     display: flex; /* Use flexbox for layout */
     z-index: 10; /* Set stacking order */
     list-style-position: inside;
     list-style: none;
-}
-
-.navbar ul .work ul {
     position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
     flex-direction: column; /* Arrange children in a column */
     left: 0; /* Align the left edge of the dropdown with the parent */
