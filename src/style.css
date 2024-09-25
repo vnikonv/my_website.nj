@@ -18,6 +18,7 @@
     flex-direction: row; /* Arranges elements into a row */
     margin: auto;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .navbar .tabs div {
@@ -302,7 +303,7 @@ footer a {
         transform: translateY(0) rotate(-45deg);
     }
 
-    .navbar .work {
+    .navbar .work .subtabs {
         position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
         flex-direction: column; /* Arrange children in a column */
         left: 10px; /* Offset the dropdown 10px from the left of the parent */
@@ -313,7 +314,7 @@ footer a {
         z-index: 20; /* Set a higher stacking order for the dropdown */
     }
     
-    .navbar .work .subtabs {
+    .navbar .work .subtabs div {
         margin-top: 0; /* Remove top margin */
         margin-bottom: 10px; /* Add bottom margin */
         background-color: unset; /* Remove default background color */
