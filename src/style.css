@@ -29,6 +29,32 @@
     color: black; /* Sets the color of link text to black */
 }
 
+.navbar ul .work {
+    position: relative; /* Set the position to relative to enable absolute positioning of its child elements */
+    display: flex; /* Use flexbox for layout */
+    z-index: 10; /* Set stacking order */
+}
+
+.navbar ul .work ul {
+    position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
+    flex-direction: column; /* Arrange children in a column */
+    left: 0; /* Align the left edge of the dropdown with the parent */
+    top: 100%; /* Position the top of the dropdown just below the parent */
+    width: 100px; /* Set a fixed width for the dropdown */
+    display: none; /* Initially hide the dropdown */
+    padding: 0; /* Remove default padding */
+    z-index: 20; /* Set a higher stacking order for the dropdown */
+}
+
+.navbar ul .work:hover ul {
+    display: block; /* Show the dropdown when hovering over the parent */
+}
+
+.navbar ul .work ul li:hover {
+    background-color: white; /* Change background color on hover */
+    border-radius: 0; /* Remove border radius */
+}
+
 .navbar a {
     text-decoration: none; /* Removes link underline */
     color: black; /* Sets the color of link text to black */
@@ -280,6 +306,37 @@ footer a {
 
     .navbar.open .burger span:nth-child(3) {
         transform: translateY(0) rotate(-45deg);
+    }
+
+    .navbar ul .work ul {
+        position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
+        flex-direction: column; /* Arrange children in a column */
+        left: 10px; /* Offset the dropdown 10px from the left of the parent */
+        top: 0; /* Align the top of the dropdown with the top of the parent */
+        width: 100px; /* Set a fixed width for the dropdown */
+        display: none; /* Initially hide the dropdown */
+        padding: 0; /* Remove default padding */
+        z-index: 20; /* Set a higher stacking order for the dropdown */
+    }
+    
+    .navbar ul .work ul li {
+        margin-top: 0; /* Remove top margin */
+        margin-bottom: 10px; /* Add bottom margin */
+        background-color: unset; /* Remove default background color */
+        font-size: 1.2rem; /* Increase font size */
+        margin-left: 10px; /* Offset the list item 10px from the left */
+        color: black; /* Set text color to black */
+    }
+    
+    .navbar ul .work ul li:hover {
+        background-color: black; /* Change background color to black on hover */
+    }
+    .navbar ul .work ul li:hover a:hover {
+        color: white; /* Change text color to white when hovering over the link */
+    }
+    
+    .navbar ul .work:hover ul li a {
+    color: black; /* Set text color to black when hovering over the parent */
     }
     
     .container {
