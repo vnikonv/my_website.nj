@@ -27,6 +27,7 @@
 .navbar .work {
     display: flex; /* Use flexbox for layout */
     z-index: 10; /* Set stacking order */
+    flex-direction: column; /* Arrange children in a column */
 }
 
 .navbar .entry {
@@ -34,11 +35,8 @@
     color: black; /* Sets the color of link text to black */
 }
 
-.navbar ul .work {
-    list-style-position: inside;
-    list-style: none;
+.navbar .work .subtabs {
     position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
-    flex-direction: column; /* Arrange children in a column */
     left: 0; /* Align the left edge of the dropdown with the parent */
     top: 100%; /* Position the top of the dropdown just below the parent */
     width: 100px; /* Set a fixed width for the dropdown */
@@ -47,13 +45,8 @@
     z-index: 20; /* Set a higher stacking order for the dropdown */
 }
 
-.navbar ul .work:hover ul {
+.navbar .work:hover .subtabs {
     display: block; /* Show the dropdown when hovering over the parent */
-}
-
-.navbar ul .work ul li:hover {
-    background-color: white; /* Change background color on hover */
-    border-radius: 0; /* Remove border radius */
 }
 
 .navbar a {
@@ -309,7 +302,7 @@ footer a {
         transform: translateY(0) rotate(-45deg);
     }
 
-    .navbar ul .work ul {
+    .navbar .work {
         position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
         flex-direction: column; /* Arrange children in a column */
         left: 10px; /* Offset the dropdown 10px from the left of the parent */
@@ -320,7 +313,7 @@ footer a {
         z-index: 20; /* Set a higher stacking order for the dropdown */
     }
     
-    .navbar ul .work ul li {
+    .navbar .work .subtabs {
         margin-top: 0; /* Remove top margin */
         margin-bottom: 10px; /* Add bottom margin */
         background-color: unset; /* Remove default background color */
@@ -329,14 +322,14 @@ footer a {
         color: black; /* Set text color to black */
     }
     
-    .navbar ul .work ul li:hover {
+    .navbar .work .subtabs div:hover {
         background-color: black; /* Change background color to black on hover */
     }
-    .navbar ul .work ul li:hover a:hover {
+    .navbar .work .subtabs div:hover a:hover {
         color: white; /* Change text color to white when hovering over the link */
     }
     
-    .navbar ul .work:hover ul li a {
+    .navbar .work:hover .subtabs div a {
     color: black; /* Set text color to black when hovering over the parent */
     }
     
