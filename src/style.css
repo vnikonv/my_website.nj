@@ -18,24 +18,23 @@
     flex-direction: row; /* Arranges elements into a row */
     margin: auto;
     justify-content: space-evenly;
-    align-items: stretch;
+    align-items: flex-end;
 }
 
 .navbar .tabs div {
-    margin-right: 10px;
+    margin-right: 10%;
 }
 
 .navbar .tabs .work {
     display: flex;
-    justify-content: center;
     z-index: 10; /* Set stacking order */
     position: relative;
-    margin: auto;
 }
 
 .navbar .entry {
     display: flex; /* Sets .entry as a flex-container for its items*/
     color: black; /* Sets the color of link text to black */
+    margin-right: 1%;
 }
 
 .navbar .tabs .work .subtabs {
@@ -47,6 +46,15 @@
     display: none; /* Initially hide the dropdown */
     padding: 0; /* Remove default padding */
     z-index: 20; /* Set a higher stacking order for the dropdown */
+}
+
+.navbar .tabs .work .subtabs div {
+    background-color: #7cc6e5;
+    margin-bottom: 1%;
+}
+
+.navbar .tabs .work .subtabs div:hover .work{
+    background-color: #7cc6e5;
 }
 
 .navbar .tabs .work:hover .subtabs {
@@ -103,6 +111,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: rgb(221, 184, 197);
+    margin: 0;
+    overflow-x: hidden;
 }
 
 /* Фон для основного содержимого страницы */
@@ -223,7 +233,7 @@ footer {
 }
 
 footer a {
-    margin-right: 10px; /* Отступ справа у ссылок в футере */
+    margin-right: 5%; /* Отступ справа у ссылок в футере */
 }
 
 .burger {
@@ -247,15 +257,15 @@ footer a {
         position: absolute;
         background: radial-gradient(circle at top left, rgb(235, 224, 142), rgb(251, 198, 138), rgb(248, 174, 226)); /* Rainbow gradient background from the upper-left angle */
         flex-direction: column; /* List elements will be displayed veryically */
-        width: 30%;
+        width: 25%;
         height: auto;
-        top: 68px; /* List displayed 68px lower from the upper-left corner of the screen */
-        left: -30%; /* List displayed 40% of the screen width to the left */
+        top: 6%; /* List displayed 6% lower from the upper-left corner of the screen */
+        left: -25%; /* List displayed 25% of the screen width to the left */
         z-index: 2; /* Stack level of the element. it will cover elements with lesser stack levels */
     }
 
     .navbar .tabs div {
-        margin-top: 10px;
+        margin-bottom: 10px;
         margin-left: 10px;
     }
 
@@ -276,7 +286,7 @@ footer a {
     }
 
     .navbar .tabs div:nth-child(1) {
-        margin-top: 20px;
+        margin-top: 3%;
     }
 
     .navbar .tabs div a {
@@ -306,35 +316,48 @@ footer a {
         transform: translateY(0) rotate(-45deg);
     }
 
-    .navbar .work .subtabs {
+    .navbar .tabs .triangle {
+        display: none;
+    }
+
+    .navbar .tabs .work .subtabs {
         position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
         flex-direction: column; /* Arrange children in a column */
-        left: 10px; /* Offset the dropdown 10px from the left of the parent */
+        left: 90%; /* Offset the dropdown 10px from the left of the parent */
         top: 0; /* Align the top of the dropdown with the top of the parent */
         width: 100px; /* Set a fixed width for the dropdown */
         display: none; /* Initially hide the dropdown */
         padding: 0; /* Remove default padding */
         z-index: 20; /* Set a higher stacking order for the dropdown */
+        background: radial-gradient(circle at top left, rgb(235, 224, 142), rgb(251, 198, 138), rgb(248, 174, 226)); /* Rainbow gradient background from the upper-left angle */
     }
     
     .navbar .work .subtabs div {
         margin-top: 0; /* Remove top margin */
-        margin-bottom: 10px; /* Add bottom margin */
+        margin-bottom: 5px; /* Add bottom margin */
         background-color: unset; /* Remove default background color */
         font-size: 1.2rem; /* Increase font size */
         margin-left: 10px; /* Offset the list item 10px from the left */
-        color: black; /* Set text color to black */
     }
-    
-    .navbar .work .subtabs div:hover {
+
+    .navbar .work:hover .subtabs {
+        transform: scale(1.0);
+    }
+
+    .navbar .work:hover .subtabs div:hover {
         background-color: black; /* Change background color to black on hover */
     }
+
+    .navbar .work:hover .subtabs div:hover a {
+        color: rgb(255, 255, 255); /* Change color to white on hover */
+    }
+    
     .navbar .work .subtabs div:hover a:hover {
-        color: white; /* Change text color to white when hovering over the link */
+        color: rgb(255, 199, 241); /* Link color changes to pink when hovered over */
     }
     
     .navbar .work:hover .subtabs div a {
-    color: black; /* Set text color to black when hovering over the parent */
+        color: black; /* Set text color to black */
     }
     
     .container {
@@ -414,6 +437,7 @@ footer a {
         position: relative;
         width: 40px;
         height: 40px;
+        margin-right: 1%;
     }
 
     .burger span {

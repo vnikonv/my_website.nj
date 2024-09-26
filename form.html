@@ -15,7 +15,7 @@
             <div><a href = "video.html">Video</a></div>
             <div><a href = "audio.html">Music</a></div>
             <div><a href = "book.html">Book</a></div>
-            <div class = "work"><a href = "#">Work &bigtriangledown;</a>
+            <div class = "work"><a href = "#">Work&bigtriangledown;</a>
                 <div class = "subtabs">
                     <div><a href = "form.html">Form</a></div>
                     <div><a href = "math.html">Math</a></div>
@@ -32,6 +32,36 @@
 
         <div class = "entry"><a href = "https://ku.edu.kz">Entry</a></div>
     </nav>
+    <main class = "form">
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for = "name">Name</label>
+                <input id = "name" name = "new_name" placeholder = "Name" type = "text" required/>
+                <label for = "surname">Surname</label>
+                <input id = "surname" name = "new_surname" placeholder = "Surname" type = "text" required/>
+                <label for = "age">Age</label>
+                <input id = "age" name = "new_age" placeholder = "18" type = "number" required/>
+                <label for = "adress">Adress</label>
+                <input id = "adress" name = "new_adress" type = "text"/>
+                <label for = "phone">Phone number</label>
+                <input id = "phone" name = "new_phone" type = "tel"/>
+                <label for = "email">Email</label>
+                <input id = "email" name = "new_email" type = "email"/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education Information</legend>
+                <label for = "faculty">Faculty</label>
+                <input id = "faculty" name = "new_faculty" type = "text"/>
+                <label for = "group">Group</label>
+                <input id = "group" name = "new_group" type = "text" required/>
+                <label for = "order">Date of enrollment order</label>
+                <input id = "order" name = "new_order" type = "date"/>
+            </fieldset>
+            <button type = "submit">Submit</button>
+        </form>
+    </main>
     <footer>
         <a href = "https://www.youtube.com"><img src = "./src/public/youtube.png" width = 50 height = 40></a>
         <a href = "https://www.facebook.com"><img src = "./src/public/facebook.png" width = 40 height = 40></a>
