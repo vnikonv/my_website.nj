@@ -9,7 +9,7 @@ main .kaleidoscope {
     top: 10vh;
     width: 100%;
     z-index: -1;
-    padding-left: 1.4vw;
+    margin-left: 1.4vw;
 }
 
 main .kaleidoscope div:before,
@@ -134,6 +134,7 @@ main .kaleidoscope div:after {
     width: 30%;
     height: auto; /* Auto height for preserving original proportions */
     margin: auto;
+    margin-top: 5%;
 }
 
 .container img:hover {
@@ -543,9 +544,9 @@ footer a {
     
     main .kaleidoscope {
         position: fixed;
-        left: 60vw;
+        left: 58vw;
+        top: 41.8vh;
         padding: 0;
-        top: 43vh;
         margin: 0;
     }
 
@@ -559,14 +560,11 @@ footer a {
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
-    /* При ширине экрана от 700px до 1000px */
 
     .container img {
         display: block;
         border-radius: 5%; /* Rounded angles */
         width: 50%;
-        height: auto; /* Auto height for preserving original proportions */
-        margin: auto;
     }
 
     .my_photo {
@@ -576,5 +574,9 @@ footer a {
 
     .form form fieldset {
         width: 65%;
+    }
+
+    main .kaleidoscope {
+        margin-top: 5.5vh;
     }
 }
