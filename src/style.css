@@ -398,10 +398,6 @@ footer a {
         transform: translateY(0) rotate(-45deg);
     }
 
-    .navbar .tabs .triangle {
-        display: none;
-    }
-
     .navbar .tabs .work .subtabs {
         position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
         flex-direction: column; /* Arrange children in a column */
