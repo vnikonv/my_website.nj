@@ -1,3 +1,43 @@
+@keyframes rota {
+    to {transform: rotate(1.5turn); outline: 3vw double rgba(216, 86, 255, 0.101);}
+}
+
+main .kaleidoscope {
+    display: flex;
+    z-index: 0;
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    z-index: -1;
+    padding-left: 1.4vw;
+}
+
+main .kaleidoscope div:before,
+main .kaleidoscope div:after,
+main .kaleidoscope div {
+    content: "";
+    position: fixed;
+    border-right: 3vw double rgba(160, 112, 248, 0.571);
+    border-left: 3vw double rgba(0, 255, 34, 0.615);
+    border-bottom: 3vw double rgba(255, 0, 76, 0.551);
+    border-top: 3vw double rgba(255, 245, 50, 0.67);
+    outline: 3vw double rgba(255, 159, 249, 0.258);
+    transform: rotate(0.08turn);
+	margin: 1em;
+}
+
+main .kaleidoscope > div {
+	transform: translateX(50vw) translateY(20vh);
+}
+
+main .kaleidoscope div:before {
+    animation: rota 4s -2s infinite ease-in-out both alternate;
+}
+
+main .kaleidoscope div:after {
+    animation: rota 4s -4s infinite ease-in-out both alternate;
+}
+
 .navbar {
     display: flex; /* Sets .navbar container as a flex-container, 
     allowing its items to be arranged in a single row */
@@ -51,7 +91,7 @@
 }
 
 .navbar .tabs .work .subtabs div {
-    background-color: #7cc6e5;
+    background-color: #d9a2a2;
     margin-bottom: 1%;
 }
 
@@ -65,7 +105,7 @@
 }
 
 .navbar a:hover {
-    background-color: #7cc6e5; /* Changes the background color when hovered over */
+    background-color: #d9a2a2; /* Changes the background color when hovered over */
     border-radius: 20%; /* Rounds up the edges when hovered over */
 }
 
@@ -90,47 +130,49 @@
 .container img {
     display: block;
     border-radius: 5%; /* Rounded angles */
-    box-shadow: 10px 10px 5px gray; /* Grey shadow */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 30%;
     height: auto; /* Auto height for preserving original proportions */
     margin: auto;
 }
 
-/* Эффект при наведении на изображение */
 .container img:hover {
     transform: scale(1.1); /* Увеличение изображения на 10% */
     transition: 0.5s ease; /* Плавный переход за 0.5 секунды */
-    box-shadow: 10px 10px 5px #7cc6e5; /* Изменение цвета тени на синий */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* Фон для всей страницы */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(221, 184, 197);
+    background-color: rgb(202, 184, 190);
     margin: 0;
     overflow-x: hidden;
 }
 
-/* Фон для основного содержимого страницы */
 main {
-    background: linear-gradient(90deg, rgb(234, 231, 228), rgb(239, 214, 196));
-    /* Градиентный фон, плавно переходящий от светлого к более темному оттенку */
+    background: radial-gradient(circle, rgb(255, 130, 130) 5vw, rgb(255, 179, 97) 15vw, rgb(255, 243, 131) 25vw, rgb(152, 255, 143) 30vw, rgb(203, 254, 255) 35vw, rgb(143, 145, 255) 40vw, rgb(217, 168, 255) 48vw, rgb(247, 192, 255) 60vw);
+    z-index: 1;
+    background-attachment: fixed;
 }
 
-/* Стили для текста в параграфах */
 p {
     text-align: justify; /* Выравнивание текста по ширине */
-    font-size: 1.2rem; /* Увеличенный размер шрифта */
+    font-size: 1.5rem; /* Увеличенный размер шрифта */
     font-weight: normal; /* Обычный вес шрифта */
     margin-right: 20px; /* Добавляет отступ справа у параграфа */
     margin-left: 10px; /* Отступы по бокам */
+    margin-bottom: 1vh;
+    color:rgb(0, 0, 0);
 }
 
-/* Эффект при наведении на параграф */
+h2 {
+    margin-left: 10px; /* Отступы по бокам */
+}
+
 p:hover {
-    background-color: #7cc6e5; /* Синий фон при наведении */
+    background-color: rgb(255, 253, 216);
 }
 
 /* Секции внутри контейнера */
@@ -181,7 +223,7 @@ p:hover {
 .audio1 img, .audio2 img, .audio3 img {
     margin: auto; /* Центрирование изображений */
     border-radius: 10%; /* Скругление углов изображений */
-    box-shadow: 5px 5px 5px #7cc6e5; /* Добавление синеватой тени к изображениям */
+    box-shadow: 5px 5px 5px gray;
 }
 
 .container-book {
@@ -198,7 +240,7 @@ p:hover {
 .book1 img, .book2 img, .book3 img {
     margin: auto; /* Центрирование изображений */
     border-radius: 10%; /* Скругление углов изображений */
-    box-shadow: 5px 5px 5px #7cc6e5; /* Добавление синеватой тени к изображениям */
+    box-shadow: 5px 5px 5px gray;
     margin-bottom: 10px; /* Отступ снизу для изображений */
     width: 25%;
     aspect-ratio: 3/5;
@@ -213,11 +255,11 @@ p:hover {
 } 
 
 .book1 img:hover, .book2 img:hover, .book3 img:hover {
-    box-shadow: 5px 5px 5px greenyellow; /* Изменение тени на зеленовато-желтую при наведении на изображение */
+    box-shadow: 5px 5px 5px #d9a2a2;
 }
 
 .book1 a:hover, .book2 a:hover, .book3 a:hover {
-    background-color: #7cc6e5; /* Изменение фона ссылки на синий при наведении */
+    background-color: #d9a2a2;
     transition: 0.7s ease; /* Плавный переход фона за 0.7 секунды */
 }
 
@@ -237,6 +279,47 @@ footer a {
 
 .burger {
     display: none;
+}
+
+.form {
+    flex-direction: column;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form form fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.form form fieldset input {
+    margin-bottom: 10px;
+}
+
+.form form fieldset legend {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.form form button {
+    width: 200px;
+    font-size: 1.2rem;
+    background-color: #7cc6e5;
+    color: white;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.form form button:hover {
+    background-color: #b85252;
 }
 
 @media (max-width: 700px) {
@@ -322,21 +405,18 @@ footer a {
     .navbar .tabs .work .subtabs {
         position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
         flex-direction: column; /* Arrange children in a column */
-        left: 80%; /* Offset the dropdown 85% from the left of the parent */
+        left: 87.5%; /* Offset the dropdown 85% from the left of the parent */
         top: 0; /* Align the top of the dropdown with the top of the parent */
         width: 100px; /* Set a fixed width for the dropdown */
         display: none; /* Initially hide the dropdown */
         padding: 0; /* Remove default padding */
         z-index: 20; /* Set a higher stacking order for the dropdown */
+        height: auto;
         background: radial-gradient(circle at top left, rgb(248, 174, 226), rgb(251, 198, 138), rgb(235, 224, 142)); /* Rainbow gradient background from the upper-left angle */
     }
     
-    .navbar .work .subtabs div {
-        margin-top: 0; /* Remove top margin */
-        margin-bottom: 5px; /* Add bottom margin */
-        background-color: unset; /* Remove default background color */
-        font-size: 1.2rem; /* Increase font size */
-        margin-left: 10px; /* Offset the list item 10px from the left */
+    .navbar .tabs .work div {
+        height: 100%;
     }
 
     .navbar .work:hover .subtabs {
@@ -366,6 +446,7 @@ footer a {
     .container {
         display: flex;
         flex-direction: column; /* Переключение на вертикальный макет */
+        align-items: center;
     }
     
     .person {
@@ -387,13 +468,13 @@ footer a {
         box-shadow: 5px 5px 5px gray; /* Тень для изображений */
         width: 95%; /* Изображение занимает 95% ширины контейнера */
         height: auto; /* Высота автоматически подстраивается под ширину */
-        margin: auto; /* Центрирование изображения по горизонтали */
+        margin: 0;
     }
     
     .container img:hover {
         transform: scale(1.03); /* Легкое увеличение изображения при наведении */
         transition: 0.5s ease; /* Плавный переход увеличения за 0.5 секунды */
-        box-shadow: 5px 5px 5px #7cc6e5; /* Изменение тени при наведении */
+        box-shadow: 5px 5px 5px #d9a2a2; /* Изменение тени при наведении */
     }
 
     .interests {
@@ -459,7 +540,26 @@ footer a {
     .burger span:nth-child(3) {
         transform: translateY(10px); /* Move the third span 10 px down */
     }
+
+    .form form fieldset {
+        width: 80%;
+    }
     
+    main .kaleidoscope {
+        position: fixed;
+        left: 60vw;
+        padding: 0;
+        top: 43vh;
+        margin: 0;
+    }
+
+    main .kaleidoscope div {
+        position: fixed;
+        border: 3vw double rgba(160, 112, 248, 0.25);
+        outline: 3vw double rgba(72, 202, 254, 0.25);
+        transform: rotate(0.08turn);
+        margin: 1em;
+    }
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
@@ -468,7 +568,6 @@ footer a {
     .container img {
         display: block;
         border-radius: 5%; /* Rounded angles */
-        box-shadow: 10px 10px 5px gray; /* Grey shadow */
         width: 50%;
         height: auto; /* Auto height for preserving original proportions */
         margin: auto;
@@ -477,5 +576,9 @@ footer a {
     .my_photo {
         width: 50%;
         height: auto;
+    }
+
+    .form form fieldset {
+        width: 65%;
     }
 }
