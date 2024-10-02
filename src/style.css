@@ -147,7 +147,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(202, 184, 190);
+    background-color: rgb(255, 253, 216);
     margin: 0;
     overflow-x: hidden;
 }
@@ -321,6 +321,82 @@ footer a {
 
 .form form button:hover {
     background-color: #b85252;
+}
+
+.math {
+    display: flex; /* Sets the main tag with class math as a flex container */
+}
+
+.math form {
+    display: flex; /* Sets the form tag within math as a flex container */
+    flex-direction: column; /* Elements of the flex container are arranged in a column */
+    margin: auto; /* Set automatic margins */
+    padding-top: 20px; /* Set top padding to 20px */
+    width: 100% /* The form tag will inherit the width of math */
+}
+
+.math form fieldset {
+    display: flex; /* Sets fieldset as a flex container */
+    width: 50%; /* The fieldset tag will inherit 50% of the width of form */
+    margin: auto; /* Set automatic margins */
+    flex-direction: column; /* Arranges elements of fieldset in a column */
+    margin-bottom: 30px; /* Sets bottom margin to 30px */
+}
+
+.math form fieldset legend {
+    text-align: center; /* Center the text */
+    font-size: 1.2rem; /* Increase font size */
+}
+
+.math form fieldset .counters {
+    display: flex; /* Sets counters as a flex container */
+    flex-direction: row; /* Arranges elements of counters in a row */
+    justify-content: center; /* Centers the elements inside counters horizontally */
+    gap: 10px; /* Set the gap between the rows and the columns to 10px */
+    margin-bottom: 20px; /* Set bottom margin to 20px */
+}
+
+.math form fieldset .counters div {
+    display: flex; /* Sets div as a flex container */
+    flex-direction: column; /* Arranges elements of div in a column */
+    width: 50%; /* div inherits 50% of counters width */
+    margin: auto; /* Sets automatic margins */
+}
+
+.math form fieldset .counters div label, input {
+    margin: auto; /* Sets automatic margins */
+    text-align: center; /* Centers the text inside input field and labels */
+}
+
+.math form fieldset .counters div label input {
+    width: 70%; /* input inherits 70% of its parent element's width */
+    font-size: 1.1rem; /* Increases text size */
+    color: black; /* Sets text color to black */
+}
+
+.math form fieldset .butcont {
+    display: flex; /* Sets butcont as a flex container */
+    flex-direction: row; /* Arranges elements of butcont in a row */
+    width: 100%; /* butcont inhertis the width of its parent element */
+    margin-bottom: 20px; /* Sets bottom margin to 20px */
+}
+
+.math form fieldset .butcont button {
+    display: block; /* Display button element as a block */
+    width: 20%; /* button inherits 20% of its parent element's width */
+    box-sizing: border-box; /* Padding and border are included in the width and height of button */
+    height: 40px; /* Height of button element (border included) */
+    margin: auto; /* Sets automatic margins */
+}
+
+.math form fieldset p {
+    display: flex; /* Sets p as a flex container */
+    margin: 0; /* Removes margins */
+}
+
+.math form fieldset p span {
+    margin: auto; /* Sets automatic margins */
+    font-size: 1.2rem; /* Increased font size */
 }
 
 @media (max-width: 700px) {
@@ -556,6 +632,10 @@ footer a {
         outline: 3vw double rgba(72, 202, 254, 0.25);
         transform: rotate(0.08turn);
         margin: 1em;
+    }
+
+    .math form fieldset {
+        width: 70%; /*Width of fieldset is 70% of that of form element */
     }
 }
 

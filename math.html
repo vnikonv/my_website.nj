@@ -32,6 +32,48 @@
 
         <div class = "entry"><a href = "https://ku.edu.kz">Entry</a></div>
     </nav>
+    <main class = "math"> <!-- Assign class math to main element -->
+        <form> <!-- Create a form for the user to fill in -->
+            <fieldset> <!-- Set the fields inside the form -->
+                <legend>Calculation</legend> <!-- The name of the form -->
+                <div class = "counters"> <!-- Create labels and input fields -->
+                    <div>
+                        <label for = "first">First<br>number</label>
+                        <input type = "number" id = "first" name = "first" placeholder = "0"> <!-- First input field -->
+                    </div>
+                    <div>
+                        <label for = "second">Second<br>number</label>
+                        <input type = "number" id = "second" name = "second" placeholder = "0"> <!-- Second input field -->
+                    </div>
+                </div>
+                <div class = "butcont"> <!-- Create buttons for mathematical operations -->
+                    <button id = "butplus">+</button>
+                    <button id = "butminus">-</button>
+                    <button id = "butmult">*</button>
+                    <button id = "butdiv">/</button>
+                </div>
+                <p><span id = "result">0</span></p> <!-- The element where the result is printed -->
+            </fieldset>
+            <fieldset>
+                <div class = "counters"> <!-- Create labels and input fields -->
+                    <div>
+                        <label for = "variable">Variable</label>
+                        <input type = "number" id = "variable" name = "variable" placeholder = "0"> <!-- First input field -->
+                    </div>
+                    <div>
+                        <label>Value</label>
+                        <p><span id = "value">0</span></p>
+                    </div>
+                </div>
+                <div class = "butcont"> <!-- Create buttons for trigonometric operations -->
+                    <button id = "butcos">cos()</button>
+                    <button id = "butsin">sin()</button>
+                    <button id = "buttg">tg()</button>
+                    <button id = "butctg">ctg()</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
     <footer>
         <a href = "https://www.youtube.com"><img src = "./src/public/youtube.png" width = 50 height = 40></a>
         <a href = "https://www.facebook.com"><img src = "./src/public/facebook.png" width = 40 height = 40></a>
