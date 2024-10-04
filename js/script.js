@@ -19,11 +19,10 @@ let variable = document.getElementById("variable");
 const result = document.getElementById("result");
 const val = document.getElementById("value")
 
-let res = 0;
-
 function calculus(mark) {
   const num1 = parseFloat(first.value) || 0;
   const num2 = parseFloat(second.value) || 0;
+  let res = 0;
   switch(mark) {
     case "+":
       res = num1 + num2;
@@ -41,10 +40,9 @@ function calculus(mark) {
   result.textContent = res;
 }
 
-let temp = 0;
-
 function trig(f) {
   const deg = parseFloat(variable.value) * (Math.PI / 180) || 0;
+  let temp = 0;
   switch(f) {
     case "cos":
       temp = Math.cos(deg);
