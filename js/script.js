@@ -57,8 +57,7 @@ function trig(f) {
       temp = (deg % Math.PI) === 0 ? "error" : 1 / (Math.tan(deg));
       break;
   }
-  temp = temp.toFixed(2);
-  val.textContent = temp;
+  typeof temp == 'number' ? val.textContent = temp.toFixed(2) : val.textContent = temp;
 }
 
 plus.addEventListener("click", (event) => {
