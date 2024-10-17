@@ -419,12 +419,16 @@ footer a {
 .API section div {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
 }
 
 .API section div span {
-    font-size: 1.5rem;
+	font-size: 1.5rem;
+}
+
+.API section span {
+	font-size: 1.5rem;
+	width: 60%;
 }
 
 .API img {
