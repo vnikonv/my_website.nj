@@ -399,6 +399,41 @@ footer a {
     font-size: 1.2rem; /* Increased font size */
 }
 
+.API {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.API section {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    margin-bottom: 5%;
+}
+
+.API section:first-child {
+    margin-top: 5%;
+}
+
+.API section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.API section div span {
+    white-space: nowrap;
+    font-size: 1.5rem;
+}
+
+.API img {
+    width: 50%;
+    height: auto;
+    border-radius: 5%;
+}
+
 @media (max-width: 700px) {
     /* Screen width below 700px */
 
@@ -637,6 +672,14 @@ footer a {
     .math form fieldset {
         width: 70%; /*Width of fieldset is 70% of that of form element */
     }
+
+    .API section {
+        width: 100%;
+    }
+
+    .API span {
+        font-size: 1.05rem;
+    }
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
@@ -658,5 +701,32 @@ footer a {
 
     main .kaleidoscope {
         margin-top: 5.5vh;
+    }
+
+    .API {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .API section {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    .API .Petro {
+        padding-top: 20px;
+    }
+
+    .API img {
+        border-radius: 8px;
+    }
+
+    .API img, span {
+        margin: auto;
+        width: 50%;
+        height: auto;
     }
 }
