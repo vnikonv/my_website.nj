@@ -2,7 +2,7 @@
     to {transform: rotate(1.5turn); outline: 3vw double rgba(216, 86, 255, 0.101);}
 }
 
-iframe {
+.iframecol iframe {
 	border: none;
 	width: 200px;
 	height:50px;
