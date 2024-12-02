@@ -6,7 +6,7 @@
 	border: none;
 	width: 200px;
 	height:50px;
-	align: center;
+	box-align: center;
 }
 
 main .kaleidoscope {
